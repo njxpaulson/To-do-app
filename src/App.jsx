@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import Items from "./components/Items.jsx";
-import TaskForm from "./components/taskForm.jsx";
-import { getTasks, updateTask } from "./taskUtils.js";
+import Items from "Items.jsx";
+import TaskForm from "taskForm.jsx";
+import { getTasks, updateTask } from "taskUtils.js";
 
 const completed = "completed";
 const notCompleted = "complete";
