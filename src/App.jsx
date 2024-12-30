@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import Items from "./Items.jsx";
-import TaskForm from "./taskForm.jsx";
+import TaskForm from "./TaskForm.jsx";
 import { getTasks, updateTask } from "./taskUtils.js";
 
 const completed = "completed";
