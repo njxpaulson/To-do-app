@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    color: #ddd;
+    background-color: #111;
+    font-family: 'arial', sans-serif;
+    font-weight: 400;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+section.items {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    background: none;
+    max-width: 1200px;
+}
+
+.items-inner {
+    margin: 8px auto;
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    border-radius: 10px;
+    max-width: 1200px;
+}
+
+.items-inner .container {
+    width: 100%;
+}
+
+.items-inner .wrapper {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.items-inner h2 {
+    font-size: 100%;
+    padding: 5px 0;
+}
+
+.items-inner h2::first-letter {
+    text-transform: capitalize;
+}
+
+.items-inner .category {
+    color: #aaa;
+    font-size: 80%;
+    padding: 8px 0;
+}
+
+.items-inner .edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.items-inner i {
+    font-size: 80%;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.items-inner i:hover {
+    filter: drop-shadow(0 0 5px #444);
+}
+
+.items-inner i.fa-trash-can {
+    font-weight: 400;
+    color: hsl(0, 100%, 50%);
+    background-color: hsla(0, 100%, 70%, 0.075);
+}
+
+.items-inner .hide {
+    display: none;
+}
+
+.items-inner i.fa-rotate-left {
+    color: hsl(0, 50%, 44%);
+    background-color: hsla(0, 100%, 70%, 0.075);
+}
+
+.items-inner i.fa-rotate-left:hover {
+    filter: drop-shadow(0 0 5px hsl(0, 100%, 70%));
+}
+
+.reDo {
+    display: flex;
+}
+
+.disabled {
+    display: none;
+}
+
+button.editBtn {
+    margin: 0 15px;
+    border: none;
+    outline: none;
+    background: none;
+    color: #aaa;
+    font-size: 60%;
+    font-weight: 300;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+button.editBtn:hover {
+    text-decoration: underline;
+}
+
+.items-inner button.notCompleted {
+    margin-left: 20px;
+    padding: 10px 12px;
+    border: none;
+    outline: 0;
+    border-radius: 5px;
+    font-size: 80%;
+    background-color: hsl(0, 100%, 61%);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.items-inner button.notCompleted:hover {
+    transform: scale(1.01);
+}
+
+.items-inner button.completed {
+    margin-left: 20px;
+    padding: 10px 12px;
+    border: none;
+    outline: 0;
+    border-radius: 5px;
+    font-size: 80%;
+    background-color: hsla(120, 100%, 70%, 0.25);
+    color: #ccc;
+    pointer-events: none;
+    transition: 0.2s ease;
+}
+
+div.mask {
+    display: flex;
+    background-color: #222222f0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    z-index: 5;
+    transition: .4s all ease;
+}
+
+.notVisible {
+    display: none;
+}
+
+form.addTaskForm {
+    margin: 0;
+    padding: 100px 20px;
+    width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #333;
+    border-radius: 10px;
+    z-index: 10;
+    transition: 0.4s top ease-in-out;
+}
+
+.hidden {
+    position: fixed;
+    top: -100%;
+}
+
+form.addTaskForm h2 {
+    font-size: 100%;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+form.addTaskForm input {
+    margin-bottom: 15px;
+    padding: 15px 0;
+    font-size: 80%;
+    color: #fff;
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 2px #ddd solid;
+}
+
+.btnContainer {
+    display: flex;
+    gap: 5px;
+    margin-left: auto;
+}
+
+form.addTaskForm button {
+    margin-top: 15px;
+    margin-left: auto;
+    padding: 10px;
+    width: 75px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    background-color: hsl(213, 100%, 50%);
+}
+
+@media only screen and (max-width: 426px) {
+    html, body {
+        padding: 10px;
+    }
+    .items-inner {
+        display: block;
+        padding: 20px;
+    }
+    .items-inner .wrapper {
+        width: 100%;
+        margin: 15px 0 0;
+        justify-content: space-between;
+    }
+    .items-inner div.edit {
+        padding: 5px 8px;
+        background-color: #313131;
+        border-radius: 10px;
+    }
+    .items-inner i {
+        font-size: 60%;
+    }
+    .items-inner button.notCompleted, .items-inner button.completed {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    form.addTaskForm {
+        width: 300px;
+        padding: 80px 20px;
+    }
+}
