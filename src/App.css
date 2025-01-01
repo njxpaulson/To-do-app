@@ -83,7 +83,7 @@ button.addItem:hover {
     height: 100%;
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1025px) {
     main {
         grid-template-columns: 100%;
         column-gap: 0;
