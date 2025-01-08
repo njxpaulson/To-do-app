@@ -28,15 +28,10 @@ section.items {
 }
 
 .items-inner {
-    margin: 8px auto;
-    padding: 30px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: #222;
-    border-radius: 10px;
-    max-width: 1200px;
 }
 
 .items-inner .container {
@@ -78,10 +73,10 @@ section.items {
     background-color: #333;
     border-radius: 50%;
     cursor: pointer;
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
 }
 
-.items-inner i:hover {
+.items-inner i:active {
     filter: drop-shadow(0 0 5px #444);
 }
 
@@ -100,7 +95,7 @@ section.items {
     background-color: hsla(0, 100%, 70%, 0.075);
 }
 
-.items-inner i.fa-rotate-left:hover {
+.items-inner i.fa-rotate-left:active {
     filter: drop-shadow(0 0 5px hsl(0, 100%, 70%));
 }
 
@@ -177,7 +172,7 @@ div.mask {
 
 form.addTaskForm {
     margin: 0;
-    padding: 100px 20px;
+    padding: 40px 20px;
     width: 500px;
     position: fixed;
     top: 50%;
@@ -197,21 +192,15 @@ form.addTaskForm {
     top: -100%;
 }
 
-form.addTaskForm h2 {
-    font-size: 100%;
-    margin-bottom: 30px;
-    color: #ccc;
-}
-
 form.addTaskForm input {
-    margin-bottom: 15px;
-    padding: 15px 0;
+    margin-bottom: 12px;
+    padding: 15px 10px;
     font-size: 80%;
-    color: #fff;
+    color: #ddd;
     outline: none;
     border: none;
-    background: none;
-    border-bottom: 2px #ddd solid;
+    background-color: #222;
+    border-radius: 5px;
 }
 
 .btnContainer {
@@ -229,8 +218,8 @@ form.addTaskForm button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    color: #fff;
-    background-color: hsl(213, 100%, 50%);
+    color: #ddd;
+    background-color: #0077ff;
 }
 
 @media only screen and (max-width: 426px) {
@@ -239,7 +228,6 @@ form.addTaskForm button {
     }
     .items-inner {
         display: block;
-        padding: 20px;
     }
     .items-inner .wrapper {
         width: 100%;
@@ -247,19 +235,22 @@ form.addTaskForm button {
         justify-content: space-between;
     }
     .items-inner div.edit {
-        padding: 5px 8px;
+        padding: 16px 8px;
         background-color: #313131;
-        border-radius: 10px;
+        border-radius: 8px;
     }
     .items-inner i {
-        font-size: 60%;
+        padding: 0 10px;
+    }
+    .items-inner i.fa-trash-can {
+        background: none;
+        font-size: 100%;
     }
     .items-inner button.notCompleted, .items-inner button.completed {
         padding-top: 12px;
         padding-bottom: 12px;
     }
     form.addTaskForm {
-        width: 300px;
-        padding: 80px 20px;
+        width: calc(100% - 20px);
     }
 }
