@@ -94,9 +94,9 @@ section.form {
     }
 }
 
-@media only screen and (max-width: 426px) {
+/* @media only screen and (max-width: 426px) {
     button.addItem {
         left: auto;
         right: -5px;
     }
-}
+} */
