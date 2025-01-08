@@ -93,7 +93,6 @@ section.form {
         column-gap: 0;
     }
 }
-<<<<<<< HEAD
 
 @media only screen and (max-width: 426px) {
     button.addItem {
@@ -101,5 +100,3 @@ section.form {
         right: -5px;
     }
 }
-=======
->>>>>>> f9802f30b7d4748c6911c823459d6baf82590c71
