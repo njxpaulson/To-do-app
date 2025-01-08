@@ -21,7 +21,7 @@ const createTask = async (newTask) => {
   } catch (error) {
     console.error(error);
   }
-};  
+};
 
 const updateTask = async (updatedTask) => {
     try {
@@ -46,7 +46,6 @@ const updateTask = async (updatedTask) => {
 const getTasks = async () => {
   try {
     const tasks = localStorage.getItem('tasks');
-    console.log('Tasks:', tasks);
     return tasks ? JSON.parse(tasks) : [];
   } catch (error) {
     console.error(error);
@@ -55,4 +54,3 @@ const getTasks = async () => {
 }; 
   
 export { createTask, getTasks, updateTask };
-  

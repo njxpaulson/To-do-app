@@ -59,21 +59,20 @@ function TaskForm( {isFormOpen, setIsFormOpen, onTaskAdded, editingTask, onUpdat
       <>
         <div className={maskClass}></div>
         <form className={formClass} onSubmit={handleCreateTask}>
-        <h2>{editingTask ? 'Edit Task' : 'Create a new task'}</h2>
           <input
             type="text"
-            placeholder="Task"
+            placeholder="Add a to-do item"
             value={taskTitle}
             onChange={taskTitleChange}
           />
           <input
             type="text"
-            placeholder="Category"
+            placeholder="Add a category"
             value={taskCategory}
             onChange={taskCategoryChange}
           />
           <button type="submit" className="add">
-            {editingTask ? "Update" : "Add"}
+            {editingTask ? "Update" : "Save"}
           </button>
         </form>
       </>
