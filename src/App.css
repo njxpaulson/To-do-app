@@ -87,12 +87,13 @@ section.form {
     height: 100%;
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1025px) {
     main {
         grid-template-columns: 100%;
         column-gap: 0;
     }
 }
+<<<<<<< HEAD
 
 @media only screen and (max-width: 426px) {
     button.addItem {
@@ -100,3 +101,5 @@ section.form {
         right: -5px;
     }
 }
+=======
+>>>>>>> f9802f30b7d4748c6911c823459d6baf82590c71
