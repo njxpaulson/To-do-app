@@ -18,34 +18,39 @@ main {
 }
 
 main p.error {
+    grid-column: 1 / -1;
     padding: 50px;
     font-size: 80%;
     text-align: center;
 }
 
-.items {
-    margin: 0;
-    padding: 0;
+section.items {
+    margin: 8px auto;
+    padding: 30px 25px;
+    width: 100%;
+    background-color: #222;
     border-radius: 10px;
+    max-width: 1200px;
 }
 
 button.addItem, button.translate {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     border: none;
     outline: none;
     border-radius: 50%;
     position: fixed;
     left: 50%;
-    bottom: 40px;
+    right: -5px;
+    bottom: 30px;
     transform: translateX(-50%);
     cursor: pointer;
-    transition: .4s ease;
+    transition: .2s ease;
     z-index: 10;
 }
 
 button.addItem {
-    font-size: 150%;
+    font-size: 200%;
     color: #fff;
     background-color: hsl(125, 70%, 50%);
 }
@@ -57,15 +62,15 @@ button.translate {
     transform: translateX(-50%) rotate(45deg);
 }
 
-button.addItem:hover {
+button.addItem:active {
     filter: drop-shadow(0 0 5px hsl(125, 70%, 50%));
 }
 
 .animate {
-    animation: slideDown 0.4s forwards;
+    animation: slide 0.4s forwards;
 }
 
-@keyframes slideDown {
+@keyframes slide {
     0% {
         transform: translate(0);
         width: 100%;
@@ -73,11 +78,11 @@ button.addItem:hover {
     100% {
         width: calc(100% - 5px);
         transform: translate(5px);
-        border-left: 5px hsla(120, 100%, 70%, 0.25) solid;
+        border-left: 4px hsla(120, 100%, 70%, 0.25) solid;
     }
 }
 
-  section.form {
+section.form {
     width: 100%;
     height: 100%;
 }
@@ -86,5 +91,12 @@ button.addItem:hover {
     main {
         grid-template-columns: 100%;
         column-gap: 0;
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    button.addItem {
+        left: auto;
+        right: -5px;
     }
 }
